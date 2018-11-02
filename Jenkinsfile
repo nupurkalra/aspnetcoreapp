@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Restore NuGet Packages') {
             steps {
-                sh 'nuget restore aspnetcoreapp.csproj'
+                sh 'dotnet restore aspnetcoreapp.csproj'
             }
         }
         stage('Build') {
