@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Restore NuGet Packages') {
             steps {
-                sh 'dotnet restore aspnetcoreapp.csproj'
+                sh '/usr/local/share/dotnet/dotnet restore aspnetcoreapp.csproj'
             }
         }
         stage('Build') {
             steps {
-                sh 'dotnet build'
+                sh '/usr/local/share/dotnet/dotnet build'
             }
         }
         stage('Test') {
